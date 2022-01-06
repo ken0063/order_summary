@@ -134,13 +134,15 @@ table {
   --veryPaleBlue: hsl(225, 100%, 98%);
   --desaturatedBlue: hsl(224, 23%, 55%);
   --darkBlue: hsl(223, 47%, 23%);
+  --bgCard: rgba(224, 232, 255, 0.3);
+  --hoverColor: rgb(152, 86, 218);
   --fontSize: 16px;
   --thin: 500;
   --normal: 700;
   --bold: 900;
-  /* --borderRadius: 20px;
+  --borderRadius: 20px;
   --heading: 25px;
-  --rounded: 50%; */
+  --rounded: 50%;
 }
 
 html,
@@ -150,27 +152,195 @@ body {
   align-items: center;
   font-family: 'Red Hat Display', sans-serif;
   color: var(--desaturatedBlue);
-  background-color: var(--veryPaleBlue);
+  background: url('./images/pattern-background-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  background-color: var(--paleBlue);
   width: 100%;
   height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: 30px;
+  line-height: 25px;
   font-size: var(--fontSize);
   font-weight: var(--thin);
 }
 
 main {
-  /* width: 80%;
-  font-family: 'Outfit', sans-serif;
-  margin: 60px 25px;
-  padding: 25px;
-  background-color: var(--cardBg);
-  border-radius: var(--borderRadius); */
+  width: 330px;
+  height: 570px;
+  font-family: 'Red Hat Display', sans-serif;
+  border-radius: var(--borderRadius);
+  text-align: center;
+  background-color: var(--veryPaleBlue);
 }
 
-/* a {
-  color: var(--white);
+a {
   font-size: var(--fontSize);
+  color: var(--desaturatedBlue);
+}
+
+.banner-container {
+  margin-bottom: 30px;
+}
+
+.banner-container img {
+  width: 330px;
+  height: 160px;
+  border-top-left-radius: var(--borderRadius);
+  border-top-right-radius: var(--borderRadius);
+}
+
+.content-container h1 {
+  font-size: var(--heading);
+  color: var(--darkBlue);
+  font-weight: var(--bold);
+  margin-bottom: 28px;
+}
+
+.content-container p {
+  margin: 0 30px;
+}
+
+.content-aside {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--bgCard);
+  border-radius: var(--borderRadius);
+  margin: 23px 25px;
+  width: 280px;
+  height: 80px;
+}
+
+.content-aside img {
+  width: 45px;
+  height: 45px;
+  border-radius: var(--rounded);
+}
+
+.content-aside a {
+  font-size: 15px;
+  font-weight: var(--normal);
+  color: var(--brightBlue);
+  transition: 5ms ease;
+}
+
+.content-aside a:hover {
+  color: var(--hoverColor);
   text-decoration: none;
-} */
+}
+
+.payment-info {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.name {
+  font-weight: var(--bold);
+  color: var(--darkBlue);
+}
+
+.action-btn {
+  display: flex;
+  flex-direction: column;
+  margin: 0 21px;
+}
+
+.action-btn button {
+  height: 45px;
+  color: var(--veryPaleBlue);
+  background-color: var(--brightBlue);
+  border-radius: 10px;
+  outline: none;
+  box-sizing: border-box;
+  font-weight: var(--bold);
+  font-size: 16px;
+  font-family: 'Red Hat Display', sans-serif;
+  border: 1px solid var(--brightBlue);
+  cursor: pointer;
+  display: inline-block;
+  box-shadow: 2px 15px 26px 2px rgba(56, 41, 224, 0.32);
+  -webkit-box-shadow: 2px 15px 26px 2px rgba(56, 41, 224, 0.32);
+  -moz-box-shadow: 2px 15px 26px 2px rgba(56, 41, 224, 0.32);
+  transition: 5ms ease;
+}
+
+.action-btn button:hover {
+  background-color: var(--hoverColor);
+  border: 1px solid var(--hoverColor);
+  box-shadow: 2px 15px 26px 2px rgba(152, 86, 218, 0.32);
+  -webkit-box-shadow: 2px 15px 26px 2px rgba(152, 86, 218, 0.32);
+  -moz-box-shadow: 2px 15px 26px 2px rgba(152, 86, 218, 0.32);
+}
+
+.action-btn a {
+  margin: 20px 0;
+  text-decoration: none;
+  font-weight: var(--bold);
+  transition: 5ms ease;
+}
+
+.action-btn a:hover {
+  color: var(--darkBlue);
+}
+
+@media only screen and (min-width: 768px) {
+  html,
+  body {
+    background: url('./images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    background-color: var(--paleBlue);
+  }
+
+  main {
+    width: 450px;
+    height: 700px;
+  }
+
+  .banner-container {
+    margin-bottom: 50px;
+  }
+
+  .banner-container img {
+    width: 450px;
+    height: 220px;
+  }
+
+  .content-container p {
+    margin: 0 77px;
+  }
+
+  .content-container h1 {
+    margin-bottom: 32px;
+  }
+
+  .content-aside {
+    margin: 25px 45px;
+    width: 350px;
+    height: 95px;
+  }
+
+  .content-aside a {
+    font-size: var(--fontSize);
+  }
+
+  .payment-info {
+    margin-right: 95px;
+  }
+
+  .action-btn {
+    margin: 0 45px;
+  }
+
+  .action-btn button {
+    height: 50px;
+  }
+
+  .action-btn a {
+    margin: 30px 0;
+  }
+}
