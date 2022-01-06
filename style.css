@@ -139,7 +139,8 @@ table {
   --thin: 500;
   --normal: 700;
   --bold: 900;
-  --borderRadius: 20px;
+  --borderRadius: 10px;
+  --borderRadius2: 20px;
   --heading: 25px;
   --rounded: 50%;
 }
@@ -169,7 +170,7 @@ main {
   width: 330px;
   height: 570px;
   font-family: 'Red Hat Display', sans-serif;
-  border-radius: var(--borderRadius);
+  border-radius: var(--borderRadius2);
   text-align: center;
   background-color: white;
 }
@@ -186,8 +187,8 @@ a {
 .banner-container img {
   width: 330px;
   height: 160px;
-  border-top-left-radius: var(--borderRadius);
-  border-top-right-radius: var(--borderRadius);
+  border-top-left-radius: var(--borderRadius2);
+  border-top-right-radius: var(--borderRadius2);
 }
 
 .content-container h1 {
@@ -251,7 +252,7 @@ a {
   height: 45px;
   color: var(--veryPaleBlue);
   background-color: var(--brightBlue);
-  border-radius: 10px;
+  border-radius: var(--borderRadius);
   outline: none;
   box-sizing: border-box;
   font-weight: var(--bold);
